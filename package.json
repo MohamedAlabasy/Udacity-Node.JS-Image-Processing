@@ -4,6 +4,7 @@
   "description": "<h1 align=\"center\"> Udacity Node.JS  Project Image Processing </h1>",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
