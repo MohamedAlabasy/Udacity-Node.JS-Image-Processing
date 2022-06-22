@@ -1,0 +1,20 @@
+{
+  "name": "udacity-node.js-image-processing",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Udacity Node.JS  Project Image Processing </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohamedAlabasy/Udacity-Node.JS-Image-Processing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MohamedAlabasy/Udacity-Node.JS-Image-Processing/issues"
+  },
+  "homepage": "https://github.com/MohamedAlabasy/Udacity-Node.JS-Image-Processing#readme"
+}
