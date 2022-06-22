@@ -9,6 +9,7 @@
     "lint:f": "eslint src/*.ts --fix",
     "jasmine": "jasmine",
     "tests": "npm run build && npm run jasmine",
+    "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
