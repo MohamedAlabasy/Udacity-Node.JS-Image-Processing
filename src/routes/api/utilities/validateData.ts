@@ -10,8 +10,8 @@ async function validateData(_name: string, _width: string, _height: string): Pro
     // #			                        check Pictures Exists                              #
     // #=======================================================================================#
     if ((await isPicturesExists(_name)) === false) {
-        const availablePictures: string = (await getAvailablePictures()).join(' | ');
-        return `<h1>Available pictures ${availablePictures}</h1>`;
+        const availablePictures: string = (await getAvailablePictures()).join(' |or| ');
+        return `<h1>Available pictures =    ${availablePictures}</h1>`;
     }
 
     // #=======================================================================================#
