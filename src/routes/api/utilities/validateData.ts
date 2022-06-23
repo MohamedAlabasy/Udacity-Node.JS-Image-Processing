@@ -7,6 +7,13 @@ async function validateData(_name: string, _width: string, _height: string): Pro
     let msg: null | string = null;
 
     // #=======================================================================================#
+    // #			                        check Pictures name                                #
+    // #=======================================================================================#
+    if (!_name) {
+        return msg = "You must enter name";
+    }
+
+    // #=======================================================================================#
     // #			                        check Pictures Exists                              #
     // #=======================================================================================#
     if ((await isPicturesExists(_name)) === false) {
@@ -37,6 +44,8 @@ async function validateData(_name: string, _width: string, _height: string): Pro
     else if (Number.isNaN(+_width)) {
         msg = "width must be number";
     }
+
+
 
     return msg;
 };
