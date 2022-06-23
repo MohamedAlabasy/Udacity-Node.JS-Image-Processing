@@ -2,7 +2,7 @@
 
 ## Description:
  
-This project is used to manipulate images and control their sizes by endpoint api
+This project is used to processing images and control their sizes by endpoint api.
 
 
 ## Folder Structure
@@ -55,11 +55,8 @@ npm i
 ```
 node run start
 ```
-`Step 4` : Open the browser at:
+`Step 4` : Open the browser and click : [http://localhost:3000](http://localhost:3000)
 
-```
-http://localhost:4000/
-```
 <hr>
 
 to run eslint to check error
