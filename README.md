@@ -24,8 +24,8 @@ This project is used to processing images and control their sizes by endpoint ap
 │   │   ├── helpers
 │   │   │   └── reporter.ts
 │   │   │
-│   │   ├── indexSpec.ts
-│   │   └── picturesSpec.ts
+│   │   ├── indexSpec.ts => `for test endpoint api` 
+│   │   └── picturesSpec.ts => `for pictures function`
 │   │
 │   │
 │   ├── utilities => `for logger middleware`
