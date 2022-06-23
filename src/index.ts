@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 
 import routes from './routes';
 import logger from './utilities/logger';
@@ -19,12 +19,15 @@ app.use('', logger, routes);
 // #=======================================================================================#
 // #			                        not Found middleware                               #
 // #=======================================================================================#
-app.use((request: express.Request, response: express.Response, next: express.NextFunction) => {
-    response.send('Not Found');
+app.use((request: Request, response: Response, next: NextFunction) => {
+    response.send('<h1>Not Found</h1>');
 });
 // #=======================================================================================#
 // #			                      error middleware                                     #
 // #=======================================================================================#
-app.use((error: any, request: express.Request, response: express.Response, next: express.NextFunction) => {
-    response.send(error.message + '');
+app.use((error: any, request: Request, response: Response, next: NextFunction) => {
+    response.send(`<h1>${error.message}</h1>`);
 });
+
+
+export default app;

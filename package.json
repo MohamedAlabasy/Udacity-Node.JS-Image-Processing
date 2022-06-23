@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint src/*.ts",
-    "lint:f": "eslint src/*.ts --fix",
+    "lint": "eslint src/**/*.ts",
+    "lint:f": "eslint src/**/*.ts --fix",
     "jasmine": "jasmine",
     "tests": "npm run build && npm run jasmine",
     "start": "nodemon src/index.ts",
