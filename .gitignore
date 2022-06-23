@@ -135,4 +135,7 @@ dist
 *.jpeg
 
 # except
+!avatar.jpg
 !background.jpg
+!gore.jpg
+!ships.jpg
