@@ -42,8 +42,9 @@ pictures.get('', async (request: Request, response: Response, next: NextFunction
  * @param _height height of picture
  * @returns path of Picture or null if Picture isn't exists
  */
-async function getPicturePath(_name: string, _width: string, _height: string): Promise<null | string> {
+export async function getPicturePath(_name: string, _width: string, _height: string): Promise<null | string> {
     let picturePath: string;
+    
     if (_width && _height) {
         picturePath = path.resolve(THUMB_PATH, `${_name}_${_width}X${_height}.jpg`)
     } else {
@@ -65,7 +66,7 @@ async function getPicturePath(_name: string, _width: string, _height: string): P
  * @param _height height of picture
  * @returns true if Picture is in Thumb or false if not
  */
-async function isPictureInThumb(_name: string, _width: string, _height: string): Promise<boolean> {
+export async function isPictureInThumb(_name: string, _width: string, _height: string): Promise<boolean> {
     try {
         await fsPromises.access(path.resolve(THUMB_PATH, `${_name}_${_width}X${_height}.jpg`));
         return true;
@@ -81,7 +82,7 @@ async function isPictureInThumb(_name: string, _width: string, _height: string):
  * @param _height height of picture
  * @returns null if Picture created or error if some thing happened
  */
-async function createPictureThumb(_name: string, _width: string, _height: string): Promise<null | string> {
+export async function createPictureThumb(_name: string, _width: string, _height: string): Promise<null | string> {
     try {
         await sharp(path.resolve(FULL_PATH, `${_name}.jpg`))
             .resize(+_width, + _height)
