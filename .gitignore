@@ -134,6 +134,7 @@ dist
 *.jpg
 *.jpeg
 
+
 # except
 !background.jpg
 !gore.jpg
