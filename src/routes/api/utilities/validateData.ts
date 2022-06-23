@@ -15,18 +15,6 @@ async function validateData(_name: string, _width: string, _height: string): Pro
     }
 
     // #=======================================================================================#
-    // #			                        check Pictures width                               #
-    // #=======================================================================================#
-    if (!_width) {
-        msg = "You must enter width";
-    } else if (+_width < 1) {
-        msg = "width must be positive number";
-    }
-    else if (Number.isNaN(+_width)) {
-        msg = "width must be number";
-    }
-
-    // #=======================================================================================#
     // #			                        check Pictures height                              #
     // #=======================================================================================#
     if (!_height) {
@@ -36,6 +24,18 @@ async function validateData(_name: string, _width: string, _height: string): Pro
     }
     else if (Number.isNaN(+_height)) {
         msg = "height must be number";
+    }
+
+    // #=======================================================================================#
+    // #			                        check Pictures width                               #
+    // #=======================================================================================#
+    if (!_width) {
+        msg = "You must enter width";
+    } else if (+_width < 1) {
+        msg = "width must be positive number";
+    }
+    else if (Number.isNaN(+_width)) {
+        msg = "width must be number";
     }
 
     return msg;
