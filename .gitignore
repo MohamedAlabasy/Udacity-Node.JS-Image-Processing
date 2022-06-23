@@ -135,4 +135,4 @@ dist
 *.jpeg
 
 # except
-!avatar.png
+!background.jpg
