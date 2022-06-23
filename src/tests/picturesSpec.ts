@@ -1,0 +1,1 @@
+import pictures from '../routes/api/pictures'
