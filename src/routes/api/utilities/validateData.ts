@@ -19,9 +19,7 @@ async function validateData(_name: string, _width: string, _height: string): Pro
     else if (Number.isNaN(+_height)) {
         msg = "height must be number";
     }
-
-
-    return `<h1>${msg}</h1>`;
+    return msg;
 };
 
 

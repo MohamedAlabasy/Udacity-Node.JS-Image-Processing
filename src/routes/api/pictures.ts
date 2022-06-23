@@ -15,11 +15,16 @@ pictures.get('', async (request: Request, response: Response, next: NextFunction
     const pictureWidth: string = request.query.width as string;
     const pictureHeight: string = request.query.height as string;
 
-
     const validate: null | string = await validateData(pictureName, pictureWidth, pictureHeight);
-    if (validate) response.send(validate)
+
+    if (validate) {
+        response.send(`<h1>${validate}</h1>`);
+    }
+
 
 })
+
+
 
 
 
