@@ -11,20 +11,28 @@ this
 ├── src
 │   ├── routes
 │   │   ├── api
-│   │   │   |── utilities
-│   │   │   |── guidance.ts
-│   │   │   └── pictures.ts
-│   │   └── index.ts
-│   │   
-│   ├── tests
+│   │   │   │── utilities
+│   │   │   │   └── validateData.ts => `To validate the image data`
+│   │   │   │
+│   │   │   │── guidance.ts => `for instructions on using the project`
+│   │   │   └── pictures.ts => `for operations on the photo`
+│   │   │   
+│   │   └── index.ts => `import all routes and export it to main index`
+│   │
+│   │
+│   ├── tests  => `for testing purposes`
 │   │   ├── helpers
 │   │   │   └── reporter.ts
+│   │   │
 │   │   ├── indexSpec.ts
-│   │   └── _ImageRouterSpec.ts
-│   │   
+│   │   └── .ts
+│   │
+│   │
 │   ├── utilities => `for logger middleware`
 │   │   └── logger.ts => `for log method & url`
-│   └── index.ts => `for run server`
+│   │
+│   │
+│   └── index.ts => `to run the server`
 └──
 ```
 
