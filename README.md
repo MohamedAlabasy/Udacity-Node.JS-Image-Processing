@@ -2,7 +2,7 @@
 
 ## Description:
  
-this
+This project is used to manipulate images and control their sizes by endpoint api
 
 
 ## Folder Structure
@@ -38,7 +38,7 @@ this
 
 ## To run this project
 
-`Step 1` : Download the source code .
+`Step 1` : To use this project must install [Node.js](https://nodejs.org/en/), Then Download the source code 
 
 ```
 git clone https://github.com/MohamedAlabasy/Udacity-Node.JS-Image-Processing.git
@@ -50,11 +50,17 @@ git clone https://github.com/MohamedAlabasy/Udacity-Node.JS-Image-Processing.git
 npm i
 ```
 
-`Step 3` : to run project
+`Step 3` : To run project
 
 ```
 node run start
 ```
+`Step 4` : Open the browser at:
+
+```
+http://localhost:4000/
+```
+<hr>
 
 to run eslint to check error
 
