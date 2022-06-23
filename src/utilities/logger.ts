@@ -1,6 +1,6 @@
-import express from 'express';
+import { Request, Response, NextFunction } from 'express';
 
-const logger = ((request: express.Request, response: express.Response, next: express.NextFunction) => {
+const logger = ((request: Request, response: Response, next: NextFunction) => {
     console.log(request.method, request.url);
     next()
 })
