@@ -19,17 +19,20 @@ pictures.get('', async (request: Request, response: Response, next: NextFunction
 
     // Make sure the data is correct else return (h1 = error massage)
     dataSendToUser = await validateData(pictureName, pictureWidth, pictureHeight);
-    if (dataSendToUser) response.send(`<h1 style="text-align: center; color:red;">${dataSendToUser}</h1>`);
+    if (dataSendToUser) return response.status(400).send(`<h1 style="text-align: center; color:red;">${dataSendToUser}</h1>`);
+
 
     // check if picture in Thumb and create picture if isn't in Thumb
     if (await isPictureInThumb(pictureName, pictureWidth, pictureHeight) === false) {
         dataSendToUser = await createPictureThumb(pictureName, pictureWidth, pictureHeight);
     }
-    if (dataSendToUser) response.send(`<h1 style="text-align: center; color:red;">${dataSendToUser}</h1>`);
+    if (dataSendToUser) return response.status(400).send(`<h1 style="text-align: center; color:red;">${dataSendToUser}</h1>`);
+
+
 
     // get Image Path and send it to user
     dataSendToUser = await getPicturePath(pictureName, pictureWidth, pictureHeight);
-    dataSendToUser ? response.sendFile(dataSendToUser) : response.send('<h1 style="text-align: center; color:red;">Error</h1>');
+    dataSendToUser ? response.sendFile(dataSendToUser) : response.status(400).send('<h1 style="text-align: center; color:red;">Error</h1>');
 })
 
 /**
@@ -41,7 +44,6 @@ pictures.get('', async (request: Request, response: Response, next: NextFunction
  */
 async function getPicturePath(_name: string, _width: string, _height: string): Promise<null | string> {
     let picturePath: string;
-
     if (_width && _height) {
         picturePath = path.resolve(THUMB_PATH, `${_name}_${_width}X${_height}.jpg`)
     } else {

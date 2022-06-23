@@ -25,7 +25,7 @@ app.use('', logger, routes);
 // #			                        not Found middleware                               #
 // #=======================================================================================#
 app.use((request: Request, response: Response, next: NextFunction) => {
-    response.send('<h1 style="text-align: center; color:red;">Not Found</h1>');
+    response.status(404).send('<h1 style="text-align: center; color:red;">Not Found</h1>');
 });
 
 
