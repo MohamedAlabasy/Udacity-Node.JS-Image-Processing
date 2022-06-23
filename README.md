@@ -4,6 +4,30 @@
  
 this
 
+
+## Folder Structure
+
+```bash
+├── src
+│   ├── routes
+│   │   ├── api
+│   │   │   |── utilities
+│   │   │   |── guidance.ts
+│   │   │   └── pictures.ts
+│   │   └── index.ts
+│   │   
+│   ├── tests
+│   │   ├── helpers
+│   │   │   └── reporter.ts
+│   │   ├── indexSpec.ts
+│   │   └── _ImageRouterSpec.ts
+│   │   
+│   ├── utilities => `for logger middleware`
+│   │   └── logger.ts => `for log method & url`
+│   └── index.ts => `for run server`
+└──
+```
+
 ## To run this project
 
 `Step 1` : Download the source code .
