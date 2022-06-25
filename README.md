@@ -1,4 +1,4 @@
-<h1 align="center"> Udacity Node.JS  Project Image Processing </h1>
+<h1 align="center"> Udacity Node.JS Project Image Processing </h1>
 
 ## Description:
  
